@@ -26,7 +26,7 @@ usuarioCtrl.getUsuarios = async (req, res, next) => {
 
 usuarioCtrl.editUsuarios = async (req, res, next) => {
     const { id } = req.params;
-    await Employee.findByIdAndUpdate(id, { $set: req.body }, { new: true });
+    await Usuario.findByIdAndUpdate(id, { $set: req.body }, { new: true });
     res.json({ status: "Usuario actualizado" });
 };
 
