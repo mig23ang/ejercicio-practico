@@ -2,10 +2,7 @@ const User = require("../models/User");
 
 const usuarioCtrl = {};
 
-usuarioCtrl.getUsuarios = async (req, res, next) => {
-    const usuarios = await User.find();
-    res.json(usuarios);
-};
+
 usuarioCtrl.createUsuarios = async (req, res, next) => {
     const usuario = new User({
         name: req.body.name,
@@ -20,6 +17,11 @@ usuarioCtrl.createUsuarios = async (req, res, next) => {
 usuarioCtrl.getUsuarios = async (req, res, next) => {
     const { id } = req.params;
     const usuario = await User.findById(id);
+    res.json(usuario);
+};
+usuarioCtrl.getUsuarios = async (req, res, next) => {
+
+    const usuario = await User.find();
     res.json(usuario);
 };
 

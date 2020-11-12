@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="row">
+        <div class="col s5">
+            <div class="card">
+                <div class="card-content">
+                    <form #usuarioForm="ngForm" (ngSubmit)="addUsuario(usuarioForm)">
+                        <div class="row">
+                            <div class="input-field col md-12">
+                                <input type="hidden" name="_id" #_id="ngModel"
+                                    [(ngModel)]="usuarioService.selectedUsuario._id">
+                            </div>
+                            <div class="input-field col md-12">
+                                <input type="text" name="name" #name="ngModel"
+                                    [(ngModel)]="usuarioService.selectedUsuario.name" placeholder="ingresa tu nombre">
+                            </div>
+                            <div class="input-field col md-5">
+                                <input type="text" name="lastname" #lastname="ngModel"
+                                    [(ngModel)]="usuarioService.selectedUsuario.lastname"
+                                    placeholder="ingresa tu apellido">
+                            </div>
+                            <div class="input-field col md-5">
+                                <input type="text" name="phone" #phone="ngModel"
+                                    [(ngModel)]="usuarioService.selectedUsuario.phone" placeholder="numero de telefono">
+                            </div>
+                            <div class="input-field col md-5">
+                                <input type="email" name="email" #email="ngModel"
+                                    [(ngModel)]="usuarioService.selectedUsuario.email" placeholder="ingresa tu email">
+                            </div>
+                            <div class="input-field col md-5">
+                                <button class="btn btn-primary mr-2" (click)="resetForm(usuarioForm)">Clean</button>
+                                <button class="btn btn-secondary">Save</button>
+                            </div>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col s7">
+            <table>
+                <thead>
+                    <th>nombre</th>
+                    <th>apellido</th>
+                    <th>telefono</th>
+                    <th>correo</th>
+                    <th>acciones</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of usuarioService.usuarios">
+                        <td>{{usuario.name}}</td>
+                        <td>{{usuario.lastname}}</td>
+                        <td>{{usuario.phone}}</td>
+                        <td>{{usuario.email}}</td>
+                        <td><a (click)="editUsuario(usuario)"> <i class="material-icons">edit</i></a></td>
+                        <td><a (click)="deleteUsuario(usuario._id)"> <i class="material-icons">delete</i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
