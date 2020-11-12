@@ -1,14 +1,13 @@
-const Usuario = require("../models/User");
+const User = require("../models/User");
 
 const usuarioCtrl = {};
 
 usuarioCtrl.getUsuarios = async (req, res, next) => {
-    const usuarios = await Usuario.find();
+    const usuarios = await User.find();
     res.json(usuarios);
 };
-
 usuarioCtrl.createUsuarios = async (req, res, next) => {
-    const usuario = new Usuario({
+    const usuario = new User({
         name: req.body.name,
         lastname: req.body.lastname,
         phone: req.body.phone,
@@ -20,18 +19,18 @@ usuarioCtrl.createUsuarios = async (req, res, next) => {
 
 usuarioCtrl.getUsuarios = async (req, res, next) => {
     const { id } = req.params;
-    const usuario = await Usuario.findById(id);
+    const usuario = await User.findById(id);
     res.json(usuario);
 };
 
 usuarioCtrl.editUsuarios = async (req, res, next) => {
     const { id } = req.params;
-    await Employee.findByIdAndUpdate(id, { $set: req.body }, { new: true });
+    await User.findByIdAndUpdate(id, { $set: req.body }, { new: true });
     res.json({ status: "Usuario actualizado" });
 };
 
 usuarioCtrl.deleteUsuarios = async (req, res, next) => {
-    await Usuario.findByIdAndRemove(req.params.id);
+    await User.findByIdAndRemove(req.params.id);
     res.json({ status: "usuario eliminado" });
 };
 
