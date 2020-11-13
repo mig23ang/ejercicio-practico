@@ -14,11 +14,9 @@ declare var M: any;
 export class UsuariosComponent implements OnInit {
 
   constructor(private usuarioService: UsuarioService) { }
-
   ngOnInit() {
     this.getUsuarios();
   }
-
   getUsuarios() {
     this.usuarioService.getUsuarios()
       .subscribe(res => {
