@@ -1,15 +1,24 @@
 const User = require("../models/User");
-
+const PDFDocument = require('pdfkit');
+const fs = require('fs');
 const usuarioCtrl = {};
+
+const doc = new PDFDocument();
 
 
 usuarioCtrl.createUsuarios = async (req, res, next) => {
+    // const pdf = doc.text(req.body, 100, 100);
+    // pdf.pipe(res)
+    // pdf.end()
+    console.log(req.body)
     const usuario = new User({
         name: req.body.name,
         lastname: req.body.lastname,
         phone: req.body.phone,
         email: req.body.email,
+        // pdf: pdf
     });
+
     await usuario.save();
     res.json({ status: "Usuario creado" });
 };

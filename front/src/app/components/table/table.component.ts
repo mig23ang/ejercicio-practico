@@ -13,17 +13,15 @@ export class TableComponent implements OnDestroy, OnInit {
   dtOptions: DataTables.Settings = {};
   dtTrigger = new Subject();
   providers: [UsuarioService]
-  data: any;
 
   constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 5
+      pageLength: 4
     };
     this.getUsuarios();
-
   }
   getUsuarios() {
     this.usuarioService.getUsuarios()
