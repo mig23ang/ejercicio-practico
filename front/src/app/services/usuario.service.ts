@@ -9,6 +9,7 @@ import { Usuario } from "../models/usuario";
 export class UsuarioService {
   selectedUsuario: Usuario;
   usuarios: Usuario[];
+  usuariosSort: Usuario[];
   readonly URL_API = "http://localhost:3000/api/usuarios";
 
   constructor(private http: HttpClient) {

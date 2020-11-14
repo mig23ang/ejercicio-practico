@@ -18,11 +18,31 @@
                 <td>{{ e.email }}</td>
                 <td> <button><i class="fa fa-file-pdf-o red" aria-hidden="true"></i></button> </td>
             </tr>
-            <!-- <tr *ngFor="let e of usuarioService.usuarios">
-                <li>{{ e.name.sort((a,b)=>{
-                    return a-b}) }}</li>
 
-            </tr> -->
         </tbody>
     </table>
+    <p>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+            aria-expanded="false" aria-controls="collapseExample">
+            Usuario ordenados por numero de caracteres
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+            <ul *ngFor="let e of usuarioService.usuariosSort">
+                <li>
+                    {{e.name}}
+                </li>
+                <li>
+                    {{e.lastname}}
+                </li>
+                <li>
+                    {{e.phone}}
+                </li>
+                <li>
+                    {{e.email}}
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>

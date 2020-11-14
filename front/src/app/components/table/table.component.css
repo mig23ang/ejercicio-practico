@@ -1,0 +1,10 @@
+ul {
+  text-align: center;
+  border-style: solid;
+  border-radius: 5%;
+  border-width: 1px;
+}
+ul:hover {
+  color: aliceblue;
+  background-color: rgb(15, 14, 14);
+}

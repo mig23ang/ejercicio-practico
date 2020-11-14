@@ -22,14 +22,33 @@ export class TableComponent implements OnDestroy, OnInit {
       pageLength: 5
     };
     this.getUsuarios();
+    this.getUsuariosSort();
   }
   getUsuarios() {
     this.usuarioService.getUsuarios()
       .subscribe(res => {
         this.usuarioService.usuarios = res as Usuario[];
         this.dtTrigger.next();
-        console.log(res)
       })
+  }
+  getUsuariosSort() {
+    this.usuarioService.getUsuarios()
+      .subscribe(res => {
+        this.usuarioService.usuariosSort = res as Usuario[];
+        const result = this.usuarioService.usuariosSort
+        console.log(result.sort((a, b) => {
+          if (a.name.length < b.name.length) {
+            return -1
+          }
+          if (a.name.length > b.name.length) {
+            return 1
+          }
+          return 0
+        }))
+
+      }
+      )
+
   }
   ngOnDestroy(): void {
     this.dtTrigger.unsubscribe();
