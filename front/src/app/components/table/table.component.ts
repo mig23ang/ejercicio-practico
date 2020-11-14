@@ -38,10 +38,10 @@ export class TableComponent implements OnDestroy, OnInit {
         const result = this.usuarioService.usuariosSort
         console.log(result.sort((a, b) => {
           if (a.name.length < b.name.length) {
-            return -1
+            return 1
           }
           if (a.name.length > b.name.length) {
-            return 1
+            return -1
           }
           return 0
         }))
