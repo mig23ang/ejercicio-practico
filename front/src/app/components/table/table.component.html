@@ -18,10 +18,11 @@
                 <td>{{ e.email }}</td>
                 <td> <button><i class="fa fa-file-pdf-o red" aria-hidden="true"></i></button> </td>
             </tr>
-            <tr *ngFor="let e of usuarioService.usuarios">
-                <li>{{ e.name }}</li>
+            <!-- <tr *ngFor="let e of usuarioService.usuarios">
+                <li>{{ e.name.sort((a,b)=>{
+                    return a-b}) }}</li>
 
-            </tr>
+            </tr> -->
         </tbody>
     </table>
 </div>

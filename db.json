@@ -1,0 +1,84 @@
+[
+  {
+    "_id": "5fad302a483bc630e8f1ecb5",
+    "name": "miguel",
+    "lastname": "reyes",
+    "phone": "31313131",
+    "email": "migue@gmail.com",
+    "__v": 0,
+    "updatedAt": "2020-11-13T17:36:49.448Z"
+  },
+  {
+    "_id": "5fad31f6483bc630e8f1ecb6",
+    "name": "alfred",
+    "lastname": "reyes",
+    "phone": "31313131",
+    "email": "a@gmail.com",
+    "__v": 0
+  },
+  {
+    "_id": "5fad3a7883d80c06e0a187bb",
+    "name": "editado",
+    "lastname": "reyes",
+    "phone": "31313131",
+    "email": "editado@gmail.com",
+    "createdAt": "2020-11-12T13:36:56.760Z",
+    "updatedAt": "2020-11-12T13:36:56.760Z"
+  },
+  {
+    "_id": "5faec32736762b32807a5f6e",
+    "name": "andrea",
+    "lastname": "perez",
+    "phone": "3107809191",
+    "email": "andrea@gmail.com",
+    "createdAt": "2020-11-13T17:32:23.606Z",
+    "updatedAt": "2020-11-13T17:32:23.606Z"
+  },
+  {
+    "_id": "5faec48436762b32807a5f6f",
+    "name": "carlos",
+    "lastname": "cardenas",
+    "phone": "3107809191",
+    "email": "cardenas@gmail.com",
+    "createdAt": "2020-11-13T17:38:12.859Z",
+    "updatedAt": "2020-11-13T17:38:12.859Z"
+  },
+  {
+    "_id": "5faec51036762b32807a5f70",
+    "name": "maria",
+    "lastname": "rojas",
+    "phone": "3107809191",
+    "email": "rojaseditado@gmail.com",
+    "createdAt": "2020-11-13T17:40:32.929Z",
+    "updatedAt": "2020-11-13T18:03:36.656Z"
+  },
+  {
+    "_id": "5faedf9ffb5e0210987578df",
+    "name": "generando pdf",
+    "lastname": "reyes",
+    "phone": "31313131",
+    "email": "editado@gmail.com",
+    "pdf": "[object PDFDocument]",
+    "createdAt": "2020-11-13T19:33:51.106Z",
+    "updatedAt": "2020-11-13T19:33:51.106Z"
+  },
+  {
+    "_id": "5fafe0511f6b48106c02a06c",
+    "name": "generando pdf",
+    "lastname": "reyes",
+    "phone": "31313131",
+    "email": "editado@gmail.com",
+    "pdf": "[object PDFDocument]",
+    "createdAt": "2020-11-14T13:49:05.127Z",
+    "updatedAt": "2020-11-14T13:49:05.127Z"
+  },
+  {
+    "_id": "5fafe0c345e27d203c9f31dc",
+    "name": "camilo",
+    "lastname": "cortes",
+    "phone": "31313131",
+    "email": "camilo@gmail.com",
+    "createdAt": "2020-11-14T13:50:59.047Z",
+    "updatedAt": "2020-11-14T13:50:59.047Z"
+  }
+]

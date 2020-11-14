@@ -19,7 +19,7 @@ export class TableComponent implements OnDestroy, OnInit {
   ngOnInit(): void {
     this.dtOptions = {
       pagingType: 'full_numbers',
-      pageLength: 4
+      pageLength: 5
     };
     this.getUsuarios();
   }
